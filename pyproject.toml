@@ -1,4 +1,6 @@
 [project]
 name = "pyLoading"
 version = "2025.0.0"
-dependencies=[]
+dependencies=[
+    "pandas"
+]
