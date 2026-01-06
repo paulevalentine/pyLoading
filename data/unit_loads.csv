@@ -1,8 +1,7 @@
-,Structure,Substrates,Finishes, Partitions,Total Gk
+,Structure,Substrates,Finishes, Partitions,Total gk
 Roof,0.5,0.45,0.6,0.0,1.5499999999999998
 Tim Flr,0.11,0.31,0.08,0.75,1.25
 Int Leaf,1.5,0.15,0.1,0.0,1.75
 Ext Leaf,2.15,0.0,0.0,0.0,2.15
 Int Wall,1.5,0.3,0.2,0.0,2.0
 Grd Flr,3.6,0.0,0.15,0.75,4.5
-Test,1.0,0.0,0.0,0.0,1.0
