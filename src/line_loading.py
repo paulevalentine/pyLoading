@@ -33,6 +33,8 @@ def calc_line_loads():
         load_lines = pd.read_csv('./load_lines.csv', index_col=0)
         if load_lines.columns.tolist() != unit_loads.index.tolist():
             print("Error : line load load categories do no math span data")
+            print(load_lines.columns.tolist())
+            print(unit_loads.index.tolist())
             display(load_lines.head())
             return 0
     else:
@@ -51,13 +53,13 @@ def calc_line_loads():
         detailed_loads[name] = load_lines_transposed[name] * unit_loads['Total gk']
         detailed_variable_loads[name] = load_lines_transposed[name] * variable_loads['qk']
 
-    print("Permanent load composition (kN/m):")
+    #print("Permanent load composition (kN/m):")
     detailed_loads.loc['Total Gk', detailed_loads.columns] = detailed_loads[detailed_loads.columns].sum()
-    display(detailed_loads)
+    #display(detailed_loads)
 
-    print("Variable load composition (kN/m):")
+    #print("Variable load composition (kN/m):")
     detailed_variable_loads.loc['Total Qk', detailed_variable_loads.columns] = detailed_variable_loads[detailed_variable_loads.columns].sum()
-    display(detailed_variable_loads)
+    #display(detailed_variable_loads)
 
     load_summary['Gk'] = detailed_loads.loc['Total Gk',:]
     load_summary['Qk'] = detailed_variable_loads.loc['Total Qk',:]
